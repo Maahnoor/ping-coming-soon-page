@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root{
+	--primary-blue: hsl(223, 87%, 63%);
+	--pale-blue: hsl(223, 100%, 88%);
+	--light-red: hsl(354, 100%, 66%);
+	--neutral-gray: hsl(0, 0%, 59%);
+	--vdark-blue: hsl(209, 33%, 12%);
+
+	--fw-light: 300;
+	--fw-bold: 600;
+	--fw-extrabold: 700;
+}
+
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+body{
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 20px;	
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--vdark-blue);
+}
+
+main{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+}
+
+#flex-container-1{
+	margin-top: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items:  center;
+	text-align: center;
+	color: var(--vdark-blue);
+
+}
+
+#flex-container-1 img{
+	margin-bottom: 2em;
+}
+#flex-container-1 span{
+	font-weight: var(--fw-light);
+	color: var(--neutral-gray);
+}
+#flex-container-1 h3{
+	margin-top: 0.6em;
+	font-weight: var(--fw-light);
+	font-size: 16px;
+}
+/*/////////////////////////////*/
+
+#flex-container-2{
+	width: 75%;
+	margin-top: 1.5em;
+	margin-bottom: 3.5em;
+}
+
+#small-container{
+	display: flex;
+}
+.inputEmail{
+	display: flex;
+	flex-direction: column;
+}
+#flex-container-2 input{
+	height: 52px;
+	border-radius: 26px;
+	flex-basis: 60%;
+	border: none;
+	outline: 1px solid var(--neutral-gray);
+	padding: 20px;
+	opacity: 0.7;
+}
+input:focus::placeholder {
+  color: transparent;
+}
+#flex-container-2 input:focus{
+	opacity: 1;
+}
+#flex-container-2 button{
+	background-color: var(--primary-blue);
+	border: none;
+	color: white;
+	font-weight: var(--fw-bold);
+	width: 100%;
+	height: 52px;
+	border-radius: 1.3em;
+	margin-left: 1em;
+}
+#flex-container-2 button:hover{
+	cursor: pointer;
+}
+#flex-container-2 button:active{
+	opacity: 0.7;
+
+}
+
+
+#illustration{
+	width: 70%;
+}
+
+#flex-container-3{
+	margin-top: 4em;
+}
+
+#flex-container-3 p{
+	margin-top: 1em;
+	font-size: 13px;
+	color: var(--neutral-gray);
+}
+
+.fa {
+  padding: 5px;
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid var(--neutral-gray);
+    box-sizing: content-box;
+}
+
+.fa-facebook, .fa-twitter, .fa-instagram{
+	color: var(--primary-blue);
+}
+.fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover{
+	cursor: pointer;
+	color: white;
+	background-color: var(--primary-blue);
+}
+
+#socials{
+	display: flex;
+	justify-content: center;
+}
+#socials a{
+	margin-left: 1em;
+}
+
+.inputEmail.error > input{
+	border: 2px solid var(--red);
+}
+
+#error-msg{
+	height: 22px;
+	color: var(--light-red);
+	font-size: 10px;
+	font-weight: var(--fw-bold);
+	font-style: italic;
+	margin-top: 0;
+	padding-top: 1em;
+	padding-left:  3em;
+}
+
+@media screen and (max-width: 400px){
+	main{
+		width: 95%;
+	}
+	#flex-container-1 h1{
+		font-size: 1.5em;
+	}
+	.inputEmail{
+		display: flex;
+		flex-direction: column;
+	}
+	#flex-container-2{
+		width: 100%;
+	}
+	#flex-container-2 input, #flex-container-2 button{
+		flex-basis: 52px;
+		width: 100%;
+	}
+	 #flex-container-2 button{
+	 	margin-top: 1em;
+	 	margin-left: 0;
+	 }
+	 #small-container{
+	 	flex-direction: column;
+	 }
+}
