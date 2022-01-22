@@ -157,9 +157,6 @@ input:focus::placeholder {
 	margin-left: 1em;
 }
 
-.inputEmail.error > input{
-	border: 2px solid var(--red);
-}
 
 #error-msg{
 	height: 22px;
