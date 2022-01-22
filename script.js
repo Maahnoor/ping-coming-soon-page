@@ -6,14 +6,17 @@ form.addEventListener('submit', (e)=> {
 	e.preventDefault();
 	
 		if(!input.value){
-			input.parentElement.classList.add('error');
+			input.style.border= ' 2px solid var(--light-red)';
+			input.style.outline = 'none';
 			msg.innerHTML="Whoops! It looks like you forgot to add your email";
 		} else if(!validateEmail(input.value)){
-			input.parentElement.classList.add('error');
+			input.style.border= ' 2px solid var(--light-red)';
+			input.style.outline = 'none';
 			msg.innerHTML="Please provide a valid email address";
 		} else{
 			msg.innerHTML= "";
-			input.parentElement.classList.remove('error')
+			input.style.border= 'none';
+			input.style.outline= '1px solid hsl(0, 0%, 59%)';
 			}
 });
 
